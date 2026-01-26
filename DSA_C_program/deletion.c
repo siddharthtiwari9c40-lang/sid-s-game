@@ -76,8 +76,8 @@ void delval(int *p,int *n){
     for(i=ind;i<(*n)-1;i++){
         *(p+i)=*(p+i+1);
     }
-    (*n)--;
-    printf("deletion complete\n");
+    
+    printf("\ndeletion complete\n");
     
 }
 void insert(int *p, int *q) {
