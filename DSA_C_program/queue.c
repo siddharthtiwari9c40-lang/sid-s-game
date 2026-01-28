@@ -5,8 +5,8 @@ void delete(int *p,int*s,int*f,int*r);
 void display(int *p, int f,int r);
 int main(){
     int o,a[5],ms=5,re=-1,fr=-1,sz=0;
-    printf("1 for insert\n2 for display\n3 for delete\n== ");
     while(1){
+    printf("1 for insert\n2 for display\n3 for delete\n== ");
     scanf("%d",&o);
     if(o==1){
         insert(a,ms,&sz,&fr,&re);
@@ -14,7 +14,7 @@ int main(){
         display(a,fr,re);
     }else if(o==3){
         delete(a,&sz,&fr,&re);
-    } else{
+    }else{
         exit(0);
     }
 }
@@ -51,7 +51,7 @@ void delete(int *p,int*s,int*f,int*r){
 
 void display(int *p, int f,int r) {
     int i;
-    for (i = f; i < r; i++) {
+    for (i = f; i <= r; i++) {
         printf("%d\n", *(p + i));
     }
 }
