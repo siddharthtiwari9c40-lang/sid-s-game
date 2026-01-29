@@ -15,7 +15,7 @@ import math
 num=float(input("enter 1st num = "))
 num2=float(input("enter 2nd num = "))
 absolute =math.fabs(num)
-print("\n1. absolute value : |{num}| = {absolute}")
+print(f"\n1. absolute value : |{num}| = {absolute}")
 ceiling = math . ceil ( num )
 print ( f"2. Ceiling : ceil ({ num }) = { ceiling }")
 floor = math . floor ( num )
@@ -45,9 +45,7 @@ if num > 0:
 log10 = math . log10 ( num )
 print ( f"11. Log Base 10: log10 ({ num }) = { log10}")
 print (" Logarithm base 10\n")
-log2 = math . log2 ( num )
-print ( f"12. Log Base 2: log2 ({ num }) = { log2}")
-print (" Logarithm base 2\n")
+
 
 #WAP to calculate Area of circle  and Perimeter of a rectangle. 
 
