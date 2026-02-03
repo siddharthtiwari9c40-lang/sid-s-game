@@ -1,29 +1,20 @@
-#WAP to show various list operations: creation, access an element, update, delete, sort, search an element
-a=[1,3,2,5,4]
+student = {
+    'b.tech':{
+        'st1':{'name':'sid','age':19},
+        'st2':{'name':'sumit','age':19}
+    },
+    'm.tech':{
+        'ai':{
+            'st1':{'name':'sid','age':19}
+        },
+        'ds':{
+            'st2':{'name':'sumit','age':19}
+        }
+    }
+ }
 
-print("list= ",a)
-print("second element of the list ",a[1])
+print( student['m.tech'] )
+print(student.get('b.tech',{}).get('st1',{}).get('name'))
 
-a.append(7)
-print("list after appending ",a)
-
-a.insert(2,33)
-print("list after inserting an element at 3rd position ",a)
-
-a.remove(33)
-print("deleting element from list ",a)
-
-a.sort()
-print("sorting list ",a)
-
-b=int(input("enter the number to be searched in the list: "))
-if b in a:
-    print("found")
-else:
-    print("not found")    
-
-#Write a Python program find the maximum and minimum of a list of numbers. 
-a=[1,3,2,5,4]
-
-print("max in list: ",max(a))
-print("min in list: ",min(a))
+del student['b.tech']['st2']
+print( student )
