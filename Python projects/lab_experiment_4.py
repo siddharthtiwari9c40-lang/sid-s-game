@@ -1,4 +1,4 @@
-#WAP to show various list operations: creation, access an element, update, delete, sort, search an element
+#WAP to show various list operations:creation,access an element,update,delete,sort,search an element
 a=[1,3,2,5,4]
 
 print("list= ",a)

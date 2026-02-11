@@ -9,7 +9,7 @@ void bsearch(int *p,int q,int x){
         printf("element %d found at location %d ",x,mid);
         break;
     }else if(x<*(p+mid)){
-        h=mid-1; // going/moving towards left 
+        h=mid-1; // going/moving towards left (1 2 3 4 5 6 7 8)
     }else{
         l=mid+1;
     }if(l>h){
