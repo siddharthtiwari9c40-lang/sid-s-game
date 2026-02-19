@@ -1,31 +1,19 @@
-student = {
-    'b.tech':{
-        'st1':{'name':'sid','age':19},
-        'st2':{'name':'sumit','age':19}
-    },
-    'm.tech':{
-        'ai':{
-            'st1':{'name':'sid','age':19}
-        },
-        'ds':{
-            'st2':{'name':'sumit','age':19}
-        }
-    }
-}
- 
+a={1,2,3}
+b={2,3,4,5}
 
-# for stream,info in student.items():
-#     print(f"stream: {stream}:")
-#     for student,values in info.items():
-#         print(f"student:{student}")
-#         for key,value in values.items():
-#             print(f"{key}:{value}")
+print(a|b)
 
-for name in student :
-    print ( name )
+print(a&b)
 
-for name in student :
-    print (f"{ name }:")
-    for key in student [ name ]:
-        print (f" {key }: { student [ name ][ key ]}")
+print(b.difference(a))
 
+print(a.symmetric_difference(b))
+######################################################################################
+
+# a={1,2,3}
+# b={2,3,4,5}
+
+# if a.isdisjoint(b):
+#     print("disjoint")
+# else:
+#     print("not disjoint")

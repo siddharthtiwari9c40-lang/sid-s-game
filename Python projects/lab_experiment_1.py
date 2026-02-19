@@ -5,11 +5,17 @@ sum = a+b
 sub = a-b
 multi=a*b
 div=a/b
+mod=a%b
+flor=a//b
+expo=a**b
+
 print("a+b",sum)
 print("a-b",sub)
 print("a*b",multi)
 print("a/b",div)
-
+print("a mod b",mod)
+print("a flor divide b",flor)
+print("a^b",expo)
 #WAP to show use of various Math Module functions. 
 import math
 num=float(input("enter 1st num = "))

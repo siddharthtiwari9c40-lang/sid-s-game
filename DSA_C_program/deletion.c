@@ -7,7 +7,7 @@ void bsearch_(int*q,int n,int p);
 void delval(int *p,int *n);
 void insert(int *p, int *q);
 int main() { 
-    int a[10], n = 6,x,u,fnd,z;
+    int a[10], n = 6,x,u;
     get(a, n);
     display(a, n);
     printf("enter 1 for binary search\nenter 2 for linear search\nenter 3 to delete an value\nenter 4 to insert new value\n== ");
