@@ -1,0 +1,10 @@
+a=(1,"hellow",3.33,'pyt'+'hon',7+3,"yes bro",60*100)
+b=(1,2,3)
+print(a)
+
+print(a[4])
+print(a[-3])
+print(a[2:6])
+print(a+b)
+print(a*3)
+del(a)
