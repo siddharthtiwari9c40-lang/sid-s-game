@@ -1,7 +1,13 @@
-a={1,2,3}
-# b={2,3,4,5}
+a=int(input("enter your salary = "))
 
-# if a.isdisjoint(b):
-#     print("disjoint")
-# else:
-#     print("not disjoint")
+# inc=(15*a)/100
+# a+=inc
+# print("incremented salary = ",a)
+
+# tax=(8*a)/100
+# a-=tax
+# print("salary after taxes = ",a)
+
+# bonus = 5000
+# a+=bonus
+# print("salary after bonus/final salary= ",a)

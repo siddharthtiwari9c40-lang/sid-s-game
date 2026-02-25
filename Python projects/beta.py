@@ -1,19 +1,16 @@
-import math
+# sentence = input("Enter a word or sentence: ")
 
-a=int(input("enter a number to find its square  root = "))
-print(math.sqrt(a))
+# sentence = sentence.lower()
+# if len(sentence) == len(set(sentence)):
+#     print("Heterogram")
+# else:
+#     print("Not a Heterogram")
 
-a=int(input("enter a number to find its factorial = "))
-print(math.factorial(a))
-
-a=float(input("enter a number to find its ceiling value= "))
-print(math.ceil(a))
-
-a=float(input("enter a number to find its floor value= "))
-print(math.floor(a))
-
-a=int(input("enter a number to find its sin ,cos,tan value= "))
-r=math.radians(a)
-print("sin = ",math.sin(r))
-print("cos = ",math.cos(r))
-print("tan = ",math.tan(r))
+from random import randint
+x=int(input("enter your guess = "))
+a=randint(0,10)
+if x==a :
+    print("yes you got it !!")
+else:
+    print("boooo!!!")
+    print("right ans = ",a)
