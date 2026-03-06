@@ -1,13 +1,14 @@
-a=int(input("enter your salary = "))
-
-# inc=(15*a)/100
-# a+=inc
-# print("incremented salary = ",a)
-
-# tax=(8*a)/100
-# a-=tax
-# print("salary after taxes = ",a)
-
-# bonus = 5000
-# a+=bonus
-# print("salary after bonus/final salary= ",a)
+a=input("enter a string of words and digits = ")
+dig=0
+cap=0
+low=0
+for i in a:
+    if i.isdigit():
+        dig+=1
+    if i.islower():
+        low+=1
+    if i.isupper() :
+        cap+=1
+print("no. of capital letters = ",cap)
+print("no. of small letters = ",low)
+print("no. of digits letters = ",dig)
