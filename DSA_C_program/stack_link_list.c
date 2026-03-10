@@ -7,7 +7,7 @@ struct node
     struct node*next;
 };
 
-struct node*head=NULL;
+struct node*top=NULL;
 
 void push(){
        int x;
@@ -16,24 +16,24 @@ void push(){
         struct node*newnode=(struct node*)malloc(sizeof(struct node));
         newnode->info=x;
         newnode->next=NULL;
-        if(head==NULL){
-            head=newnode;
+        if(top==NULL){
+            top=newnode;
         }else{
-            newnode->next=head;
-            head=newnode;
+            newnode->next=top;
+            top=newnode;
         }
     }
 void peep(){
-    if(head==NULL){
+    if(top==NULL){
         printf("stack is empty");
     }else{
-        printf("%d",head->info);
+        printf("%d\n",top->info);
     }
 }
 
 void display(){
-    struct node*temp=head;
-    if(head==NULL){
+    struct node*temp=top;
+    if(top==NULL){
         printf("stack is empty");
     }else{
         while(temp!=NULL){
@@ -44,12 +44,12 @@ void display(){
 }
 
 void pop(){
-    struct node*temp=head;
-    if(head==NULL){
+    struct node*temp=top;
+    if(top==NULL){
         printf("link list is empty");
     }else{
-        printf("poped value = %d",head->info);
-        head=head->next;
+        printf("poped value = %d",top->info);
+        top=top->next;
     }
 }
 
@@ -57,7 +57,7 @@ void main(){
     int o;
     while (1)
     {
-        printf("1. push\n2. pop\n3. peep\n4. display\nenter your choice== ");
+        printf("\n1. push\n2. pop\n3. peep\n4. display\nenter your choice== ");
         scanf("%d",&o);
         switch(o)
         {
