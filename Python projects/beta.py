@@ -1,16 +1,7 @@
-# sentence = input("Enter a word or sentence: ")
+x=open("happy.txt","a+")
+a=x.write("\nhello i ma the fool")
+print(a)
 
-# sentence = sentence.lower()
-# if len(sentence) == len(set(sentence)):
-#     print("Heterogram")
-# else:
-#     print("Not a Heterogram")
-
-from random import randint
-x=int(input("enter your guess = "))
-a=randint(0,10)
-if x==a :
-    print("yes you got it !!")
-else:
-    print("boooo!!!")
-    print("right ans = ",a)
+x.seek(0)
+b=x.read()
+print(b)

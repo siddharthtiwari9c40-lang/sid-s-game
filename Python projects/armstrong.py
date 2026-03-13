@@ -5,12 +5,10 @@ def armstrong_check(x):
         a = 0
         temp = b
         digits = len(str(b))
-        
         while temp > 0:
             i = temp % 10
             a += i ** digits
             temp //= 10
-        
         if a == b:
             print(b)
         

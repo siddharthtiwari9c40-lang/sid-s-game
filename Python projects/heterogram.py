@@ -17,3 +17,14 @@ if len(repeat)==0:
 else:
     print(False)
     print("repeated characters =",repeat)
+
+#################################################
+
+sentence = input("Enter a word or sentence: ")
+
+sentence = sentence.lower()
+if len(sentence) == len(set(sentence)):
+    print("Heterogram")
+else:
+    print("Not a Heterogram")
+
