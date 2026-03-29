@@ -1,43 +1,35 @@
-# def add(a,b):
-#     x=a+b
-#     print(x)
+class employee:
+    def __init__(self,name,id,salary):
+        self.name = name
+        self.id = id
+        self.salary = salary
+    
+    def get_name(self):
+        return self.name
+    def get_id(self):
+        return self.id
+    def get_salary(self):
+        return self.salary
 
-# add(1,2)
+    def set_salary(self, salary):
+        if salary < 0:
+            print("Error: Salary cannot be negative")
+        else:
+            self.__salary = salary
 
-# add= lambda x,y:x+y
-# print(add(2,2))
+e1= employee("sid",111,1000)
+e2= employee("siddharth",121,1500)
 
-# sq= lambda x:x**2
-# print(sq(5))
 
-# x=int(input("enter num 1 = "))
-# y=int(input("enter num 2 = "))
+print(e1.get_name())     
+print(e1.get_salary())   
 
-# add= lambda x,y:x+y
-# sub= lambda x,y:x-y
-# multi = lambda x,y:x*y
-# div= lambda x,y:x/y
 
-# print(add(x,y))
-# print(sub(x,y))
-# print(multi(x,y))
-# print(div(x,y))
+e1.set_salary(50000)
 
-# a= lambda x:x*x
-# print(a(x))
+e1.set_salary(-1000)
 
-# a= lambda x:x%2==0 
-# if a(x):
-#     print("even")
-# else:
-#     print("odd")
+print(e1.get_salary())   
 
-# a= lambda x,y: x>y
-# if a(x,y):
-#     print("1st is bigger")
-# else:
-#     print("2nd is bigger")
-
-n=[1,2,3,4,5]
-result = list(map(lambda x:x*x,n))
-print(result)
+e2.set_salary(-2000)     
+print(e2.get_salary())   

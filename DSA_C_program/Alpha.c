@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Node structure
+// Define structure for a node
 struct Node 
 {
     int data;
@@ -9,54 +9,71 @@ struct Node
     struct Node* right;
 };
 
-// Global root and count
-struct Node* root = NULL;
-int count = 0;
-
-// Create node
+// Function to create a new node
 struct Node* createNode(int data) 
 {
-    struct Node* n = (struct Node*)malloc(sizeof(struct Node));
-    n->data = data;
-    n->left = NULL;
-    n->right = NULL;
-    return n;
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->left = NULL;
+    newNode->right = NULL;
+    return newNode;
 }
 
-// Insert at position (like array index)
-struct Node* insertAt(struct Node* temp, int data, int index) 
+// Function to insert nodes level-wise (to maintain complete binary tree)
+struct Node* insertLevelOrder(int arr[], int i, int n) 
 {
-    if (index == 1) {
-        return createNode(data);
+    struct Node* root = NULL;
+    if (i < n) 
+    {
+        root = createNode(arr[i]);
+        // insert left child
+        root->left = insertLevelOrder(arr, 2*i + 1, n);
+        // insert right child
+        root->right = insertLevelOrder(arr, 2*i + 2, n);
     }
-
-    if (index % 2 == 0) {
-        temp->left = insertAt(temp->left, data, index / 2);
-    } else {
-        temp->right = insertAt(temp->right, data, index / 2);
-    }
-
-    return temp;
+    return root;
 }
 
-// Insert function (only data passed)
-void insert(int data) 
+// Inorder traversal (for checking)
+void inorder(struct Node* root) 
 {
-    count++;  // increase node count
-    root = insertAt(root, data, count);
+    if (root != NULL) 
+    {
+        inorder(root->left);
+        printf("%d ", root->data);
+        inorder(root->right);
+    }
+}
+void preorder(struct Node* root) 
+{
+    if (root != NULL) 
+    {
+        printf("%d ", root->data);
+        preorder(root->left);
+        preorder(root->right);
+    }
 }
 
-// Main
-int main() {
-    insert(10);
-    insert(20);
-    insert(30);
-    insert(40);
-    insert(50);
-    insert(60);
-    insert(70);
-
-    printf("Level-order tree created (without queue).\n");
-
+void postorder(struct Node* root) 
+{
+    if (root != NULL) 
+    {
+        postorder(root->left);
+        postorder(root->right);
+        printf("%d ", root->data);
+    }
+}
+// Main function
+int main() 
+{
+    // 10 different values
+    int arr[10] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+    struct Node* root = insertLevelOrder(arr, 0, 10);
+    printf("Inorder Traversal of Complete Binary Tree:\n");
+    inorder(root);
+    printf("\nPreorder Traversal of Complete Binary Tree:\n");
+    preorder(root);
+    printf("\npostorder Traversal of Complete Binary Tree:\n");
+    postorder(root);
     return 0;
 }

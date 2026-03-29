@@ -1,0 +1,4 @@
+luffy , dsa , 17
+zoro , python , 17
+sanji , maths , 18
+nami , data science , 19
