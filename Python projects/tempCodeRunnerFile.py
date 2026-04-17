@@ -1,11 +1,7 @@
-class student:
-#     def __init__(self,name,marks):
-#         self.__name=name 
-#         self.__marks=marks 
-#     def get_marks(self):
-#         return self.__marks
-#     def get_name(self):
-#         return self.__name
-# s=student("sid",99)
-# print(s.get_name())
-# print(s.get_marks())
+with open ('new.txt','w') as f:
+    f.write("hello there i am sid\n")
+    f.write("that is it\n")
+    f.write("I don't wnana say nothing else...")
+with open ('new.txt','r') as f:
+    f.seek(0)
+    print(f.read())
