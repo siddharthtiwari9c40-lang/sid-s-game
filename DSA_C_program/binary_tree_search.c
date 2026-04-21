@@ -69,11 +69,11 @@ int main(){
     for(i=0;i<10;i++){
         bst_insert(val[i]);
     }
-    printf("inorder treversal is = ");
+    printf("\ninorder treversal is = ");
     inorder(root);
-    printf("post order treversal is = ");
+    printf("\npost order treversal is = ");
     preorder(root);
-    printf("pst order treversal = ");
+    printf("\npst order treversal = ");
     postorder(root);
-    return 0;
+    return 0;  
 }

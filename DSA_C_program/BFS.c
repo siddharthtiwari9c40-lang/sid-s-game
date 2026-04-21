@@ -3,7 +3,6 @@
 
 int queue[50], front = -1, rear = -1;
 
-
 void input(int m[50][50], int *n){
     int i, j;
     printf("Enter number of vertices: ");
@@ -16,7 +15,6 @@ void input(int m[50][50], int *n){
         }
     }
 }
-
 
 void display(int m[50][50], int n){
     int i, j;
@@ -80,7 +78,6 @@ void BFS(int graph[50][50], int n){
         }
     }
 }
-
 
 int main(){
     int m[50][50], n;
