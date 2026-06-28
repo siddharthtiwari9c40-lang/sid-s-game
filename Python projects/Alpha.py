@@ -1,11 +1,17 @@
-a= int(input("enter a number"))
-b=1
-for i in range(1,a+1):
-    b=b*i
+class employee:
+    company="amazon"
+    def __init__(self):
+        print(f"your company is {self.company}")
 
-print(b)
+class student:
+    marks=400
+    def __init__(self):
+        print(f"your marks{self.marks}")        
 
-a=[1,2,3]
-b=a[::-1]
+class programmer(employee , student):
+    company="flipkart"
+    marks=300
 
-print(b)
+a=programmer()
+b=employee()
+c=student()

@@ -33,8 +33,10 @@ void enqueue(int x){
         printf("Queue overflow\n");
         return;
     }
-    if(front == -1) front = 0;
+    if(front == -1){ 
+    front = 0;
     queue[++rear] = x;
+    }
 }
 
 int dequeue(){

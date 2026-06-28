@@ -96,7 +96,7 @@ void insertion_sort(int *p, int q){
             j--;
         }
         *(p + j + 1) = temp;
-    }
+    } 
 }
 
 void merge_sort(int *p, int q){
