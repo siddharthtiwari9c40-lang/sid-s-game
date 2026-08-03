@@ -1,6 +1,6 @@
-a=input("enter a string = ")
-b=a
-if(a==b[::-1]):
+a=int(input("enter a num = "))
+b=str(a)
+if(b==b[::-1]):
     print("palandrom")
 else:
     print("no")
