@@ -1,8 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-struct node
-{
+struct node{
     int info;
     struct node* next;
 };
@@ -55,7 +54,7 @@ void display(){
         while(temp != NULL){
             printf("%d ", temp->info);
             temp = temp->next;
-        }
+        }   
         printf("\n");
     }
 }

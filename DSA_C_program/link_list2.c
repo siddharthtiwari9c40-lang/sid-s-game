@@ -30,7 +30,7 @@ void insert(){
             temp->next=newnode;
         }
     }
-}
+}           
 
 void display(){
     struct node*temp=head;
@@ -61,7 +61,7 @@ void delval(){
     }
     pre->next=temp->next;
     free(temp);
-
+    
 }
 
 int main() {

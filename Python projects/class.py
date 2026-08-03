@@ -11,19 +11,19 @@ from abc import ABC
 # print(s.get_name())
 # print(s.get_marks())
 
-# class animal(ABC):
-#     def sound(self):
-#         pass
-# class dog(animal):
-#     def sound(self):
-#         print("bark")
-# class cat(animal):
-#     def sound(self):
-#         print("mew")
-# d=dog()
-# c=cat()
-# d.sound()
-# c.sound()
+class animal(ABC):
+    def sound(self):
+        pass
+class dog(animal):
+    def sound(self):
+        print("bark")
+class cat(animal):
+    def sound(self):
+        print("mew")
+d=dog()
+c=cat()
+d.sound()
+c.sound()
 
 class animal:
     def __init__(self,name):

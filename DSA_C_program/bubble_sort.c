@@ -15,7 +15,7 @@ void main(){
     display(a,n);
     free(a);
 }
-
+    
 void get(int **p, int *i){
     int j=0;
     printf("How many elements you want to store in the array: ");

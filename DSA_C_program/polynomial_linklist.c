@@ -16,7 +16,6 @@ void main(){
     insert(5, 8);
     insert(2, 3);
     insert(7, 1);
-    insert(7, 0);
     display();
 }
 

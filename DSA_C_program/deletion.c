@@ -38,7 +38,7 @@ int lsearch(int *p,int q,int x){
             break;
         }
     }
-    if(*(p+i)!=x){
+    if(*(p+i)!=x){ 
         printf("not found");
         return -1;
     }

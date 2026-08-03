@@ -11,7 +11,7 @@ with open("inventory.csv","w", newline='') as f:
     writer.writerow([113,'notebook',80,40])
 
 with open("inventory.csv","r") as f:
-    
+    print(f.read())
     f.seek(0)
     reader = csv.reader(f)
     next(reader)

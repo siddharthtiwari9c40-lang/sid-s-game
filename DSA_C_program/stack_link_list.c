@@ -11,7 +11,7 @@ struct node*top=NULL;
 
 void push(){
        int x;
-        printf("enter the element to be inserted = ");
+        printf("enter the element to be inserted = ");  
         scanf("%d",&x);
         struct node*newnode=(struct node*)malloc(sizeof(struct node));
         newnode->info=x;
@@ -28,7 +28,7 @@ void peep(){
         printf("stack is empty");
     }else{
         printf("%d\n",top->info);
-    }
+    }   
 }
 
 void display(){

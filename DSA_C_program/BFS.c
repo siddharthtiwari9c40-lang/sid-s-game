@@ -35,8 +35,9 @@ void enqueue(int x){
     }
     if(front == -1){ 
     front = 0;
-    queue[++rear] = x;
     }
+    queue[++rear] = x;
+    
 }
 
 int dequeue(){

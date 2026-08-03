@@ -1,47 +1,36 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void display(int *p,int i){
-    int j;
-    for(j=0;j<i;j++){
-        printf("\n%d",*(p+j));
-    }
-}
+struct node{
+    int info;
+    struct node*next;
+};
 
-void get(int **p,int *i){
-    int j;
-    *p=(int *)malloc(*i*sizeof(int));
-    printf("enter how many elements = ");
-    scanf("%d",i);
-    if(*p==NULL){
-        printf("memory allocation failed");
+struct node*top =NULL;
+void push(){
+    int x;
+    printf("enter the element to push = ");
+    scanf("%d",&x);
+    struct node*newnode=(struct node*)malloc(sizeof(struct node));
+    newnode->info=x;
+    newnode->next=NULL;
+    if(top==NULL){
+        top=newnode;
     }else{
-        for(j=0;j<*i;j++){
-            printf("enetr the number = ");
-            scanf("%d",(*p+j));
-        }
+        newnode->next=top;
+        top=newnode;
     }
 }
 
-void selection_sort(int *p,int i){
-    int j,k,s,temp;
-    for(j=0;j<i-1;j++){
-        s=j;
-        for(k=j+1;k<i;k++){
-            if(*(p+k)<*(p+s)){
-                s=k;
-            }
-        }
-        if(s!=j){
-            temp=*(p+j);
-            *(p+j)=*(p+s);
-            *(p+s)=temp;
-        }
+void display(){
+    struct node*temp=top;
+    while(temp!=NULL){
+        printf("%d\n",temp->info);
+        temp=temp->next;
     }
 }
-int main(){
-    int *n=NULL,i;
-    get(&n,&i);
-    selection_sort(n,i);
-    display(n,i);
-} 
+
+void pop(){
+    struct node*temp=top;
+    top=top->next;
+}

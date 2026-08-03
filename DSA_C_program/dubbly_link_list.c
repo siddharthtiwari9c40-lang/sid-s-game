@@ -50,7 +50,7 @@ void delval(){
 
     if(head==NULL){
         printf("link list is empty");
-        return;
+        return; 
     }
     if(head->info==x){
         head=head->next;
@@ -62,7 +62,7 @@ void delval(){
     while(temp!=NULL && temp->info!=x){
         temp =temp->next;
     }
-    if(temp==NULL){
+    if(temp==NULL){ 
         printf("not found");
         return;
     }

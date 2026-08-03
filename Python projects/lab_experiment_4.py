@@ -7,7 +7,7 @@ print("second element of the list ",a[1])
 a.append(7)
 print("list after appending ",a)
 
-a.insert(2,33)
+a.insert(2,33) 
 print("list after inserting an element at 3rd position ",a)
 
 a.remove(33)
