@@ -15,6 +15,9 @@ void reverse(char s[]) {
 }
 int main() {
     char s[100];
+    int a;
+    a= 4 + 2 % - 8;
+    printf("%d",a);
     printf("Enter string: ");
     gets(s);
     reverse(s);
