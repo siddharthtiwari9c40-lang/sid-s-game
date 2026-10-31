@@ -1,20 +1,44 @@
-#include <Wire.h>
-#include <LiquidCrystal_I2C.h>
-LiquidCrystal_I2C lcd(0x27, 16, 2);
-
-void setup(){
-  lcd.init(); 
-  lcd.backlight();
-  lcd.setCursor(0,0);
-  lcd.print("hello sid"); 
-  delay(3000);
-  lcd.setCursor(0, 1);
-  lcd.print("how are you");
-  delay(3000); 
-  lcd.clear(); 
-  delay(1000); 
+char t;
+ 
+void setup() {
+pinMode(13,OUTPUT);   
+pinMode(12,OUTPUT);   
+pinMode(11,OUTPUT);   
+pinMode(10,OUTPUT);   
+pinMode(9,OUTPUT);   
+Serial.begin(9600);
+ 
+}
+ 
+void loop() {
+if(Serial.available()){
+  t = Serial.read();
+  Serial.println(t);
+}
+ 
+if(t == 'F'){           
+  digitalWrite(13,HIGH);
+  digitalWrite(11,HIGH);
+}
+ 
+else if(t == 'B'){      
+  digitalWrite(12,HIGH);
+  digitalWrite(10,HIGH);
+}
+  
+else if(t == 'L'){      
+  digitalWrite(11,HIGH);
+}
+ 
+else  if(t == 'R'){      
+  digitalWrite(13,HIGH);
 }
 
-void loop(){
-
+else if(t == 'S'){      
+  digitalWrite(13,LOW);
+  digitalWrite(12,LOW);
+  digitalWrite(11,LOW);
+  digitalWrite(10,LOW);
+}
+delay(100);
 }
